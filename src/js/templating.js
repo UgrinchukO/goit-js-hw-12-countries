@@ -1,6 +1,7 @@
 import cardCountry from '../templates/card_country.hbs';
 import country from '../templates/country.hbs';
-import '../node_modules/toastr/build/toastr.css';
+import toastr from 'toastr'
+// import '../node_modules/toastr/build/toastr.css';
 import refs from './refs';
 
 function createCard(data) {

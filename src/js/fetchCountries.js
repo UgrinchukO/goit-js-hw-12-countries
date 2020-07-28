@@ -1,3 +1,5 @@
+import createCard from './templating';
+
 function fetchCountries(event) {
   const baseURL = `https://restcountries.eu/rest/v2/name/${event.target.value}`;
   fetch(baseURL)
@@ -5,7 +7,7 @@ function fetchCountries(event) {
       return response.json();
     })
     .then(data => {
-      return data;
+      createCard(data);
     })
     .catch(error => console.log(error));
 }
