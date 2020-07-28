@@ -1,9 +1,9 @@
-import cardCountry from '../template/card_country';
-import country from '../template/country';
-
+import cardCountry from '../templates/card_country.hbs';
+import country from '../templates/country.hbs';
+import '../node_modules/toastr/build/toastr.css';
 import refs from './refs';
 
-const createCard = data => {
+function createCard(data) {
   if (data.length >= 2 && data.length <= 10) {
     refs.menuRef.innerHTML = country(data);
   }
@@ -11,8 +11,8 @@ const createCard = data => {
     refs.menuRef.innerHTML = cardCountry(data);
   }
   if (data.length > 10) {
-    error('Not found!!!');
+    toastr.error('Not found!!!');
   }
-};
+}
 
 export default createCard;

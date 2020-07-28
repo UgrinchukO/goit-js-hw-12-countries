@@ -1,7 +1,9 @@
-function fetchCountries(searchCountries) {
-  return fetch(`https://restcountries.eu/rest/v2/name/${searchCountries}`)
-    .then(response => response.json())
-
+function fetchCountries(event) {
+  const baseURL = `https://restcountries.eu/rest/v2/name/${event.target.value}`;
+  fetch(baseURL)
+    .then(response => {
+      return response.json();
+    })
     .then(data => {
       return data;
     })
