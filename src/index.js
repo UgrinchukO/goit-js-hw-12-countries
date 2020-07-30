@@ -1,5 +1,5 @@
 // import debounce from 'lodash.debounce';
-import './styles.css';
+import './styles.scss';
 import '../node_modules/toastr/build/toastr.css';
 import refs from './js/refs';
 import fetchCountries from './js/fetchCountries';
